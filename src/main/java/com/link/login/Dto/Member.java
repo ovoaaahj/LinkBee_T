@@ -1,5 +1,6 @@
 package com.link.login.Dto;
 
+
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -9,11 +10,14 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@Table(schema = "T_MEMBER")
 public class Member {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long idx;
+
     private String email;
+
     private String password;
 }
